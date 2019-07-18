@@ -1,6 +1,5 @@
+call Devenv /build debug %~dp0\Helloworld\Helloworld.sln
 
-msbuild %~dp0\HelloWorld\HelloWorld\Helloworld.csproj
+call %~dp0\Helloworld\Helloworld\bin\debug\Helloworld.exe
 
-cd HelloWorld\HelloWorld\bin\Debug
-
-HelloWorld
+pause
