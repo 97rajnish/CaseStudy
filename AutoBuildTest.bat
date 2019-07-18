@@ -1,4 +1,6 @@
-set param1= %~1
 
-msbuild %param1%.exe
-%param1%
+msbuild %~dp0\HelloWorld\HelloWorld\Helloworld.csproj
+
+cd HelloWorld\HelloWorld\bin\Debug
+
+HelloWorld

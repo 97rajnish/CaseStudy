@@ -1,7 +1,6 @@
 C:\Users\320053937\Documents\CaseStudy\Helloworld\Helloworld\bin\Debug\Helloworld.exe.config
 C:\Users\320053937\Documents\CaseStudy\Helloworld\Helloworld\bin\Debug\Helloworld.exe
 C:\Users\320053937\Documents\CaseStudy\Helloworld\Helloworld\bin\Debug\Helloworld.pdb
-C:\Users\320053937\Documents\CaseStudy\Helloworld\Helloworld\obj\Debug\Helloworld.csprojAssemblyReference.cache
-C:\Users\320053937\Documents\CaseStudy\Helloworld\Helloworld\obj\Debug\Helloworld.csproj.CoreCompileInputs.cache
 C:\Users\320053937\Documents\CaseStudy\Helloworld\Helloworld\obj\Debug\Helloworld.exe
 C:\Users\320053937\Documents\CaseStudy\Helloworld\Helloworld\obj\Debug\Helloworld.pdb
+C:\Users\320053937\Documents\CaseStudy\HelloWorld\HelloWorld\obj\Debug\Helloworld.csprojResolveAssemblyReference.cache
