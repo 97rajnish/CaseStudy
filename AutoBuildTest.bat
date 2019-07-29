@@ -1,6 +1,4 @@
-
-call Devenv /build debug %~dp0\Helloworld\Helloworld.sln
-
-call %~dp0\Helloworld\Helloworld\bin\Debug\Helloworld.exe
-
-pause
+echo "Generating static analysis report"
+call "C:\Users\320063801\Downloads\CaseStudy\SAToolReportGenerator\SAToolReportGenerator\bin\Debug\SAToolReportGenerator.exe"
+echo "Report generated: C:\Temp\Report.html"
+start "" "C:\Temp\Report.html"

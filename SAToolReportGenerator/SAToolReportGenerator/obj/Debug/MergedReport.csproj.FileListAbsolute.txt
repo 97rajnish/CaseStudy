@@ -1,0 +1,11 @@
+C:\Users\320063801\Documents\CaseStudy1\MergedReport\MergedReport\bin\Debug\MergedReport.exe.config
+C:\Users\320063801\Documents\CaseStudy1\MergedReport\MergedReport\bin\Debug\MergedReport.exe
+C:\Users\320063801\Documents\CaseStudy1\MergedReport\MergedReport\bin\Debug\MergedReport.pdb
+C:\Users\320063801\Documents\CaseStudy1\MergedReport\MergedReport\obj\Debug\MergedReport.csprojAssemblyReference.cache
+C:\Users\320063801\Documents\CaseStudy1\MergedReport\MergedReport\obj\Debug\MergedReport.csproj.CoreCompileInputs.cache
+C:\Users\320063801\Documents\CaseStudy1\MergedReport\MergedReport\obj\Debug\MergedReport.exe
+C:\Users\320063801\Documents\CaseStudy1\MergedReport\MergedReport\obj\Debug\MergedReport.pdb
+C:\Users\320063801\Documents\CaseStudy1\MergedReport\MergedReport\bin\Debug\HtmlAgilityPack.dll
+C:\Users\320063801\Documents\CaseStudy1\MergedReport\MergedReport\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\320063801\Documents\CaseStudy1\MergedReport\MergedReport\bin\Debug\HtmlAgilityPack.xml
+C:\Users\320063801\Documents\CaseStudy1\MergedReport\MergedReport\obj\Debug\MergedReport.csproj.CopyComplete
