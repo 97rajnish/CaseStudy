@@ -10,17 +10,14 @@ namespace SAToolReportGenerator
         [TestMethod]
         public void TestMethod1()
         {
-            string s1 = @"C:\Users\320063801\OneDrive - Philips\TRAINING.NET\SampleConsoleApp\NDependOut1\NDependReport.html";
-            string s2 = @"C:\Users\320063801\OneDrive - Philips\TRAINING.NET\SampleConsoleApp\NDependOut1\TICSReport.txt";
+            string s1 = @"C:\Users\320053937\Documents\TICSReport.txt";
             List<string> listoffiles = new List<string>();
             List<string> listOfFiles = new List<string>();
-            string reportPath = @"C:\Users\320063801\OneDrive - Philips\TRAINING.NET\SampleConsoleApp\NDependOut1";
+            string reportPath = @"C:\Users\320053937\Documents";
             listoffiles.Add(s1);
-            listoffiles.Add(s2);
             
             listOfFiles = Program.GetReportFiles(reportPath);
-            Console.WriteLine(listOfFiles[0]);
-            for(int i = 0; i < 2; i++)
+            for(int i = 0; i < 1; i++)
             Assert.AreEqual(listoffiles[i], listOfFiles[i]);           
         }
         [TestMethod]

@@ -14,9 +14,8 @@ namespace SAToolReportGenerator
         {
             List<string> str = new List<string>() { };
             str.Add(" ");
-            str.Add("Level: 1)");
-            str.Add("Level: 2)");
-            str.Add("Level: 3)");
+            for(int i = 1; i <= 10; i++)
+            str.Add("Level: " + i.ToString() + ")");
             return str;
         }
         /// <summary>
@@ -29,6 +28,7 @@ namespace SAToolReportGenerator
         public static string GetSameLevelIssues(int Level, string text, List<string> str)
         {
             string category1 = "";
+            string nosuchlevel = "Doesn't exist";
             string s1 = ""; string strlevel = "";
             string s = ""; int level1startindex1;
             for (int i = 0; i < str[Level].Length; i++)
@@ -45,21 +45,29 @@ namespace SAToolReportGenerator
                 s1 = text.Substring(level1startindex, level1endindex - level1startindex);
                 if (s1[0] == '\n')
                     s1 = s1.Remove(0, 1);
-                while (s1[0] == ' ')
-                    s1 = s1.Remove(0, 1);
+                s1 = s1.TrimStart(' ');
                 s1 = s1 + "@";
-                s1 = s1.Replace(".@", " ; " + strlevel + " ;@");
-                level1startindex1 = level1startindex1 - 3;
-                while (text[level1startindex1] != ':')
+                if (s1.IndexOf(".@") == -1)
                 {
-                    category1 = category1 + text[level1startindex1];
-                    level1startindex1--;
+                    string nosuchlevel1 = nosuchlevel + "; " + Level.ToString() + "; invalid ;$";
+                    s = s + nosuchlevel1;
+                    level1startindex = text.IndexOf(str[Level], level1endindex);
+                    continue; }
+                else
+                {
+                    s1 = s1.Replace(".@", " ; " + strlevel + " ;@");
+                    level1startindex1 = level1startindex1 - 3;
+                    while (text[level1startindex1] != ':')
+                    {
+                        category1 = category1 + text[level1startindex1];
+                        level1startindex1--;
+                    }
+                    category1 = new string(category1.Reverse().ToArray());
+                    s1 = s1.Replace("@", category1 + " ;" + "$");
+                    category1 = category1.Replace(category1, string.Empty);
+                    s = s + s1;
+                    level1startindex = text.IndexOf(str[Level], level1endindex);
                 }
-                category1 = new string(category1.Reverse().ToArray());
-                s1 = s1.Replace("@", category1 + " ; " + "$");
-                category1 = category1.Replace(category1, string.Empty);
-                s = s + s1;
-                level1startindex = text.IndexOf(str[Level], level1endindex);
             }
             return s;
         }

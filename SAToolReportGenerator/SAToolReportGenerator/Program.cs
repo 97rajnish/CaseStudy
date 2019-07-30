@@ -19,7 +19,22 @@ namespace SAToolReportGenerator
         {
             string reportPath = ConfigurationManager.AppSettings["ReportPath"];
             List<string> listOfReportFiles = GetReportFiles(reportPath);
-            ReportParserAndGenerator(listOfReportFiles);
+            try
+            {
+
+                if (listOfReportFiles.Count == 0)
+                    throw new Exception();
+                else
+                    ReportParserAndGenerator(listOfReportFiles);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("NO Reports Generated");
+                string path2 = @"C:\Temp\Report.html";
+                StreamWriter tw = new StreamWriter(path2);
+                tw.WriteLine("No Report Generated");
+                tw.Close();
+            }
         }
 
         #region private functions
@@ -116,7 +131,7 @@ namespace SAToolReportGenerator
             int Level = 1; int level1startindex;
             string nosuchlevel = "Doesn't exist"; string s = "";
             List<string> str = TextParser.StringsOfDifferentLevels();
-            while (Level <= 3)
+            while (Level <= 10)
             {
                 level1startindex = text.IndexOf(str[Level]);
                 if (level1startindex == -1)

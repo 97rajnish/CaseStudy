@@ -20,7 +20,7 @@ namespace SAToolReportGenerator
         public static int UpdateHTMLFileReportToFinalReport(List<string> issues, int flag)
         {
             Console.WriteLine("Creating Report");
-            var path1 = @"C:\Users\320063801\OneDrive - Philips\Desktop\template.html";
+            var path1 = @"C:\Users\320053937\OneDrive - Philips\desktop\template.html";
             string htmlFormat = File.ReadAllText(path1);
             for (int i = 1; i <= 3; i++)
                 htmlFormat = WriteIssuesToString(issues, htmlFormat, i);
@@ -50,9 +50,9 @@ namespace SAToolReportGenerator
         public static int UpdateTextFileReportToFinalReport(List<string> TicsIssues, int flag)
         {
             Console.WriteLine("creating Report");
-            var path1 = @"C:\Users\320063801\OneDrive - Philips\Desktop\template1.html";
+            var path1 = @"C:\Users\320053937\OneDrive - Philips\desktop\template1.html";
             string txtFormat = File.ReadAllText(path1);
-            for (int i = 1; i <= 3; i++)
+            for (int i = 1; i <= 10; i++)
                 txtFormat = WriteTicsIssuesToString(TicsIssues, txtFormat, i);
             string path2 = @"C:\Temp\Report.html";
             return GenerateFinalReport(ref flag, txtFormat, path2);
@@ -64,21 +64,11 @@ namespace SAToolReportGenerator
             string issue3 = TicsIssues[i - 1].Split(';')[2];
             string temp1 = ""; string temp2 = ""; string temp3 = "";
             string s = i.ToString();
-            int trstartindex; int trendindex;
-            if (issue1.Equals("Doesn't exist"))
-            {
-                trstartindex = txtFormat.IndexOf("<tr>");
-                for(int j = 0; j < i; j++)
-                trstartindex = txtFormat.IndexOf("<tr>", trstartindex + 5);
-                trendindex = txtFormat.IndexOf("</tr>", trstartindex);
-                temp3 = txtFormat.Remove(trstartindex, trendindex - trstartindex);
-            }
-            else
-            {
+    
                 temp1 = txtFormat.Replace("***TCNAME" + s + "***", issue1);
                 temp2 = temp1.Replace("***TCLEVEL" + s + "***", issue2);
                 temp3 = temp2.Replace("***TCGROUP" + s + "***", issue3);
-            }
+            
             txtFormat = temp3;
             return txtFormat;
         }
